@@ -1,0 +1,25 @@
+﻿body {
+    text-align: center;
+}
+.main input {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+label {
+    font-size: large;
+}
+
+input {
+    font-size: xx-large;
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="styles/default.css" rel="stylesheet" />
+    <title>Selector!</title>
+</head>
+<body>
+    <section class="main">
+        <ul>
+            <li>
+                <label for="lowerbasses">
+                    Lower Basses:
+                </label>
+                <input id="lowerbasses" name="lowerbasses" type="number" min="0" value="5" placeholder="Lower Basses" />
+            </li>
+            <li>
+                <label for="upperbasses">
+                    Upper Basses:
+                </label>
+                <input id="upperbasses" name="upperbasses" type="number" min="0" value="5" placeholder="Upper Basses" />
+            </li>
+            <li>
+                <label for="loweraltos">
+                    Lower Altos:
+                </label>
+                <input id="loweraltos" name="loweraltos" type="number" min="0" value="5" placeholder="Lower Altos" />
+            </li>
+            <li>
+                <label for="upperaltos">
+                    Upper Altos:
+                </label>
+                <input id="upperaltos" name="upperaltos" type="number" min="0" value="5" placeholder="Upper Altos" />
+            </li>
+            <li>
+                <label for="lowersops">
+                    Lower Sopranos:
+                </label>
+                <input id="lowersops" name="lowersops" type="number" min="0" value="5" placeholder="Lower Sopranos" />
+            </li>
+            <li>
+                <label for="uppersops">
+                    Upper Sopranos:
+                </label>
+                <input id="uppersops" name="uppersops" type="number" min="0" value="5" placeholder="Upper Sopranos" />
+            </li>
+        </ul>
+        <label>
+            Rows:
+        </label>
+       
+        <input id="rows" name="rows" type="number" min="0" value="4" placeholder="Desired number of rows" />
+        <div id="choirsize">Total:</div>
+        <canvas id="choircanvas" width="300" height="300">
+            Error: canvas not supported
+        </canvas>
+    </section>
+    <script src="scripts/jquery-2.1.0.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
