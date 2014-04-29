@@ -55,7 +55,14 @@ class Lineup
 		canvas = $('#choircanvas')[0]
 
 		windowWidth = $(window).width()
-		canvasWidth = windowWidth - 50
+		inputsWidth = $('#inputs').width()
+		rightColumnSpace = windowWidth - inputsWidth
+		if (rightColumnSpace > 600)
+			canvasWidth = rightColumnSpace
+		else
+			canvasWidth = $('#results').width()
+
+		canvasWidth = (canvasWidth) - 25
 
 		$('#choircanvas').attr("width", "#{canvasWidth}px")
 
@@ -72,7 +79,8 @@ class Lineup
 		rowLength += 2 unless end == 0
 		
 		horizontalSize = Math.floor(canvas.width / (rowLength + 4)) 
-		verticalSize = Math.floor(window.height / (@rows + 1))
+		verticalSize = Math.floor($(window).height() / (@rows + 1))
+		size = Math.min(horizontalSize, verticalSize)
 
 		canvasHeight = size * (@rows + 3)
 		$('#choircanvas').attr("height", "#{canvasHeight}px")
@@ -131,4 +139,5 @@ $choirCanvas = null
 jQuery ->
 	$inputs = $('input')	
 	$inputs.on('change', refreshParts)
+	
 	refreshParts()

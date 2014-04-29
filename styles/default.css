@@ -23,3 +23,15 @@ input {
     float: left;
     margin-bottom: 15px;
 }
+
+
+@media only screen 
+and (min-width : 721px) {
+    #inputs {
+        width: 400px;
+        float: left;
+    }
+    #results {
+        width: 100%;
+    }
+}

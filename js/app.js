@@ -113,12 +113,19 @@
     };
 
     Lineup.prototype.draw = function() {
-      var canvas, canvasHeight, canvasWidth, choirSize, context, end, part, remainder, remainderUsed, rowFilled, rowLength, size, windowWidth, x, xInitialOffset, xOffset, y, yOffset, _i, _len, _ref, _results;
+      var canvas, canvasHeight, canvasWidth, choirSize, context, end, horizontalSize, inputsWidth, part, remainder, remainderUsed, rightColumnSpace, rowFilled, rowLength, size, verticalSize, windowWidth, x, xInitialOffset, xOffset, y, yOffset, _i, _len, _ref, _results;
       choirSize = $('#choirsize');
       choirSize.html("Total: " + this.parts.length);
       canvas = $('#choircanvas')[0];
       windowWidth = $(window).width();
-      canvasWidth = windowWidth - 50;
+      inputsWidth = $('#inputs').width();
+      rightColumnSpace = windowWidth - inputsWidth;
+      if (rightColumnSpace > 600) {
+        canvasWidth = rightColumnSpace;
+      } else {
+        canvasWidth = $('#results').width();
+      }
+      canvasWidth = canvasWidth - 25;
       $('#choircanvas').attr("width", "" + canvasWidth + "px");
       context = canvas.getContext('2d');
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -128,7 +135,9 @@
       if (end !== 0) {
         rowLength += 2;
       }
-      size = Math.floor(canvas.width / (rowLength + 4));
+      horizontalSize = Math.floor(canvas.width / (rowLength + 4));
+      verticalSize = Math.floor($(window).height() / (this.rows + 1));
+      size = Math.min(horizontalSize, verticalSize);
       canvasHeight = size * (this.rows + 3);
       $('#choircanvas').attr("height", "" + canvasHeight + "px");
       x = 0;
