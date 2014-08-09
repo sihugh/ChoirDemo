@@ -3,16 +3,18 @@
     <head>
         <meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Generate a lineup diagram for a choir of up to six parts" > 
+        <meta name="description" content="Generate a line-up diagram for a choir of up to six parts" > 
         <meta name="author" content="Simon Hughesdon" >
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
         <link href="styles/default.min.css" rel="stylesheet" />
         <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
-        <title>Choir Lineup Generator</title>
+        <title>Choir Line-up Generator</title>
     </head>
 <body>
     <section class="main">
         <div id="inputs">
+            <h1>Choir line-up generator</h1>
+            <p>Select the total of each voice part and the number of rows required.
             <ul>
                 <li>
                     <label for="lowerbasses">
@@ -55,6 +57,8 @@
                 Rows:
             </label>
             <input id="rows" name="rows" type="number" min="0" value="4" placeholder="Desired number of rows" />
+
+            <a href="https://plus.google.com/u/1/115320514323836621907" >site author</a>
         </div>
         <div id="results">
             <div id="choirsize">Total:</div>
@@ -63,7 +67,6 @@
             </canvas>
         </div>
     </section>
-    <a href="https://plus.google.com/u/1/115320514323836621907" >site author</a>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="js/default.min.js"></script>
 </body>
