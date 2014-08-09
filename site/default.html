@@ -11,63 +11,64 @@
         <title>Choir Line-up Generator</title>
     </head>
 <body>
-    <section class="main">
-        <div id="inputs">
-            <h1>Choir line-up generator</h1>
-            <p>Select the total of each voice part and the number of rows required.
-            <ul>
-                <li>
-                    <label for="lowerbasses">
-                        Lower Basses:
-                    </label>
-                    <input id="lowerbasses" value="2" name="lowerbasses" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-                <li>
-                    <label for="upperbasses">
-                        Upper Basses:
-                    </label>
-                    <input id="upperbasses" value="2" name="upperbasses" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-                <li>
-                    <label for="loweraltos">
-                        Lower Altos:
-                    </label>
-                    <input id="loweraltos" value="2" name="loweraltos" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-                <li>
-                    <label for="upperaltos">
-                        Upper Altos:
-                    </label>
-                    <input id="upperaltos" value="2" name="upperaltos" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-                <li>
-                    <label for="lowersops">
-                        Lower Sopranos:
-                    </label>
-                    <input id="lowersops" value="2" name="lowersops" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-                <li>
-                    <label for="uppersops">
-                        Upper Sopranos:
-                    </label>
-                    <input id="uppersops" value="2" name="uppersops" type="number" min="0" placeholder="e.g. 42" />
-                </li>
-            </ul>
-            <label>
-                Rows:
+  <section class="main">
+    <div id="inputs">
+      <h1>Choir line-up generator</h1>
+      <p>Select the total of each voice part and the number of rows required.
+        <ul>
+          <li>
+            <label for="lowerbasses">
+              Lower Basses:
             </label>
-            <input id="rows" name="rows" type="number" min="0" value="4" placeholder="Desired number of rows" />
-
-            <a href="https://plus.google.com/u/1/115320514323836621907" >site author</a>
-        </div>
-        <div id="results">
-            <div id="choirsize">Total:</div>
-            <canvas id="choircanvas" width="300" height="300">
-                Error: canvas not supported
-            </canvas>
-        </div>
+            <input id="lowerbasses" value="2" name="lowerbasses" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+          <li>
+            <label for="upperbasses">
+              Upper Basses:
+            </label>
+            <input id="upperbasses" value="2" name="upperbasses" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+          <li>
+            <label for="loweraltos">
+              Lower Altos:
+            </label>
+            <input id="loweraltos" value="2" name="loweraltos" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+          <li>
+            <label for="upperaltos">
+              Upper Altos:
+            </label>
+            <input id="upperaltos" value="2" name="upperaltos" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+          <li>
+            <label for="lowersops">
+              Lower Sopranos:
+            </label>
+            <input id="lowersops" value="2" name="lowersops" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+          <li>
+            <label for="uppersops">
+              Upper Sopranos:
+            </label>
+            <input id="uppersops" value="2" name="uppersops" type="number" min="0" placeholder="e.g. 42" />
+          </li>
+        </ul>
+        <label>
+            Rows:
+        </label>
+        <input id="rows" name="rows" type="number" min="0" value="4" placeholder="Desired number of rows" />
+      </div>
+      <div>
+        <a href="https://plus.google.com/u/1/115320514323836621907" >site author</a>
+      </div>
+      <div id="results">
+        <div id="choirsize">Total:</div>
+        <canvas id="choircanvas" width="300" height="300">
+          Error: canvas not supported
+        </canvas>
+      </div>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="js/default.min.js"></script>
-</body>
+  </body>
 </html>
